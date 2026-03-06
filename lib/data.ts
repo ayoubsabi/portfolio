@@ -82,7 +82,7 @@ export type Experience = {
 export const experience: Experience[] = [
   {
     company: "Done",
-    role: "Software Engineer",
+    role: "Senior Software Engineer",
     period: "Oct 2024 — Present",
     description:
       "Working on Morocco's first super app, a platform integrating multiple services to simplify daily life. Key contributions include designing a granular permission system, building a real-time notification system for order lifecycle events and advertising push notifications via Firebase Cloud Messaging (FCM), and developing an intelligent geospatial dispatch system using Redis Geospatial Indexes to assign orders to the nearest available driver. Also implemented Redis Geospatial for real-time driver tracking, Typesense for fast and relevant search, and ELK Stack for centralized monitoring and observability.",
@@ -101,8 +101,8 @@ export const experience: Experience[] = [
   },
   {
     company: "Pyxicom",
-    role: "Backend Developer",
-    period: "Jan 2020 — Oct 2024",
+    role: "Software Engineer",
+    period: "Oct 2019 — Oct 2024",
     description:
       "Designed and developed complex web applications for multiple clients over nearly 5 years. Built secure and efficient REST APIs, integrated new modules, and maintained existing features. Focused on performance optimization and production deployments across Symfony and Laravel-based projects.",
     skills: ["PHP", "Symfony", "Laravel", "React.js", "MySQL", "PostgreSQL", "REST APIs"],
