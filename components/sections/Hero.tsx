@@ -21,18 +21,13 @@ const item: Variants = {
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col justify-center px-6 pt-16">
-      {/* Subtle grid background */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(99,102,241,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(99,102,241,0.03) 1px, transparent 1px)",
-          backgroundSize: "64px 64px",
-        }}
-      />
+      {/* Cold mesh + dot grid background */}
+      <div className="absolute inset-0 pointer-events-none bg-mesh-cold bg-dot-grid" />
 
-      {/* Gradient glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full bg-accent/5 blur-[120px] pointer-events-none" />
+      {/* Primary glow — top center */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] rounded-full bg-accent/8 blur-[100px] pointer-events-none" />
+      {/* Secondary glow — bottom right */}
+      <div className="absolute bottom-1/4 right-0 w-[400px] h-[400px] rounded-full bg-accent/4 blur-[120px] pointer-events-none" />
 
       <div className="relative max-w-5xl mx-auto w-full">
         <motion.div
@@ -41,23 +36,23 @@ export default function Hero() {
           animate="show"
           className="flex flex-col gap-6"
         >
-          <motion.p
-            variants={item}
-            className="text-accent text-sm font-mono tracking-widest uppercase"
-          >
-            Hello, I&apos;m
-          </motion.p>
+          <motion.div variants={item} className="flex items-center gap-3">
+            <span className="h-px w-8 bg-accent" />
+            <p className="text-accent text-xs font-mono tracking-[0.25em] uppercase">
+              Available for Work
+            </p>
+          </motion.div>
 
           <motion.h1
             variants={item}
-            className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.05]"
+            className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.05]"
           >
             {profile.name}
           </motion.h1>
 
           <motion.h2
             variants={item}
-            className="text-2xl sm:text-3xl lg:text-4xl font-light text-muted"
+            className="text-2xl sm:text-3xl lg:text-4xl font-light text-foreground/60"
           >
             {profile.title}
           </motion.h2>
@@ -79,7 +74,7 @@ export default function Hero() {
                   .querySelector("#projects")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
-              className="px-6 py-3 bg-accent text-white rounded-full text-sm font-medium hover:bg-accent/90 transition-all hover:shadow-[0_0_24px_rgba(99,102,241,0.4)] cursor-pointer"
+              className="px-6 py-3 bg-accent text-bg rounded-full text-sm font-medium hover:bg-accent/90 transition-all hover:shadow-[0_0_24px_rgba(56,189,248,0.4)] cursor-pointer"
             >
               View Projects
             </button>
@@ -97,14 +92,14 @@ export default function Hero() {
 
           <motion.div
             variants={item}
-            className="flex items-center gap-5 pt-2"
+            className="flex items-center gap-3 pt-2"
           >
             <a
               href={profile.github}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              className="text-muted hover:text-foreground transition-colors"
+              className="p-2 text-muted hover:text-foreground transition-colors"
             >
               <Github size={20} />
             </a>
@@ -113,14 +108,14 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="text-muted hover:text-foreground transition-colors"
+              className="p-2 text-muted hover:text-foreground transition-colors"
             >
               <Linkedin size={20} />
             </a>
             <a
               href={`mailto:${profile.email}`}
               aria-label="Email"
-              className="text-muted hover:text-foreground transition-colors"
+              className="p-2 text-muted hover:text-foreground transition-colors"
             >
               <Mail size={20} />
             </a>
@@ -133,11 +128,8 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 0.6 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center text-muted"
       >
-        <span className="text-xs tracking-widest uppercase font-mono">
-          Scroll
-        </span>
         <motion.div
           animate={{ y: [0, 6, 0] }}
           transition={{ repeat: Infinity, duration: 1.6, ease: "easeInOut" }}

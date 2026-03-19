@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Github, Menu, X } from "lucide-react";
 import { profile } from "@/lib/data";
 
 const navLinks = [
@@ -30,7 +31,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-bg/90 backdrop-blur-md border-b border-border"
+          ? "bg-bg/85 backdrop-blur-xl border-b border-border shadow-[0_1px_0_0_rgba(56,189,248,0.08)]"
           : "bg-transparent"
       }`}
     >
@@ -38,7 +39,7 @@ export default function Navbar() {
         {/* Logo */}
         <a
           href="#"
-          className="text-foreground font-semibold text-sm tracking-widest uppercase hover:text-accent transition-colors"
+          className="flex items-center text-foreground font-semibold text-sm tracking-widest uppercase hover:text-accent transition-colors"
           onClick={(e) => {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -48,6 +49,7 @@ export default function Navbar() {
             .split(" ")
             .map((n) => n[0])
             .join("")}
+          <span className="w-1.5 h-1.5 rounded-full bg-accent inline-block align-middle ml-1" />
         </a>
 
         {/* Desktop nav */}
@@ -67,8 +69,9 @@ export default function Navbar() {
               href={profile.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm px-4 py-1.5 border border-border rounded-full text-muted hover:text-foreground hover:border-accent transition-all"
+              className="text-sm text-muted hover:text-foreground transition-colors flex items-center gap-1.5"
             >
+              <Github size={14} />
               GitHub
             </a>
           </li>
@@ -76,7 +79,7 @@ export default function Navbar() {
 
         {/* Mobile menu button */}
         <button
-          className="md:hidden text-muted hover:text-foreground transition-colors"
+          className="md:hidden p-2 text-muted hover:text-foreground transition-colors"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -85,32 +88,41 @@ export default function Navbar() {
       </nav>
 
       {/* Mobile menu */}
-      {menuOpen && (
-        <div className="md:hidden bg-surface border-b border-border">
-          <ul className="max-w-5xl mx-auto px-6 py-4 flex flex-col gap-4">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <button
-                  onClick={() => handleNavClick(link.href)}
-                  className="text-muted hover:text-foreground transition-colors cursor-pointer w-full text-left"
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.18 }}
+            className="md:hidden bg-surface/95 backdrop-blur-xl border-b border-border"
+          >
+            <ul className="max-w-5xl mx-auto px-6 py-2 flex flex-col">
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <button
+                    onClick={() => handleNavClick(link.href)}
+                    className="py-3 text-muted hover:text-foreground transition-colors cursor-pointer w-full text-left text-sm"
+                  >
+                    {link.label}
+                  </button>
+                </li>
+              ))}
+              <li>
+                <a
+                  href={profile.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="py-3 flex items-center gap-1.5 text-muted hover:text-foreground transition-colors text-sm"
                 >
-                  {link.label}
-                </button>
+                  <Github size={14} />
+                  GitHub
+                </a>
               </li>
-            ))}
-            <li>
-              <a
-                href={profile.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted hover:text-foreground transition-colors"
-              >
-                GitHub
-              </a>
-            </li>
-          </ul>
-        </div>
-      )}
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

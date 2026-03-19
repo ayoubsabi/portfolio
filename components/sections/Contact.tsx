@@ -9,19 +9,16 @@ const links = [
     label: "Email",
     href: `mailto:${profile.email}`,
     icon: Mail,
-    value: profile.email,
   },
   {
     label: "GitHub",
     href: profile.github,
     icon: Github,
-    value: "github.com/ayoubsabi",
   },
   {
     label: "LinkedIn",
     href: profile.linkedin,
     icon: Linkedin,
-    value: "linkedin.com/in/ayoubsabi",
   },
 ];
 
@@ -36,7 +33,12 @@ export default function Contact() {
           transition={{ duration: 0.5 }}
           className="text-center max-w-xl mx-auto"
         >
-          <p className="text-accent text-sm font-mono tracking-widest uppercase mb-3">
+          {/* Vertical anchor line */}
+          <div className="flex justify-center mb-4">
+            <div className="h-12 w-px bg-gradient-to-b from-transparent to-accent/40" />
+          </div>
+
+          <p className="text-accent text-xs font-mono tracking-[0.25em] uppercase mb-3">
             Say Hello
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight mb-4">
@@ -54,9 +56,10 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="inline-block px-8 py-3.5 bg-accent text-white rounded-full text-sm font-medium hover:bg-accent/90 transition-all hover:shadow-[0_0_32px_rgba(99,102,241,0.4)] mb-16"
+            className="inline-flex items-center gap-2.5 px-8 py-3.5 bg-accent text-bg rounded-full text-sm font-semibold hover:bg-accent/90 transition-all hover:shadow-[0_0_32px_rgba(56,189,248,0.3)] mb-16"
           >
-            Send me an email
+            <Mail size={16} />
+            Send an Email
           </motion.a>
 
           <motion.div
@@ -66,20 +69,20 @@ export default function Contact() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-6"
           >
-            {links.map(({ label, href, icon: Icon, value }) => (
+            {links.map(({ label, href, icon: Icon }) => (
               <a
                 key={label}
                 href={href}
                 target={label !== "Email" ? "_blank" : undefined}
                 rel={label !== "Email" ? "noopener noreferrer" : undefined}
-                className="flex items-center gap-2.5 text-muted hover:text-foreground transition-colors group"
+                className="flex items-center gap-2 min-h-[44px] text-muted hover:text-foreground transition-colors group"
                 aria-label={label}
               >
                 <Icon
                   size={18}
                   className="group-hover:text-accent transition-colors"
                 />
-                <span className="text-sm">{value}</span>
+                <span className="text-sm">{label}</span>
               </a>
             ))}
           </motion.div>
