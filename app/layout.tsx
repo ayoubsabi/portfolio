@@ -13,22 +13,33 @@ export const viewport: Viewport = {
 };
 
 const description =
-  "Software Engineer at Done (Morocco's first super app), formerly at Pyxicom. Expert in PHP, Laravel, Symfony, PostgreSQL, PostGIS, React.js and Redis. Based in Rabat, Morocco.";
+  "Senior Software Engineer specializing in PHP, Laravel, and Symfony with 6+ years of experience. Based in Rabat, Morocco. Expert in geospatial systems, real-time notifications, and high-performance backend architecture.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ayoubsabi.com"),
   title: {
-    default: "Ayoub Sabi — PHP & Laravel Software Engineer | Morocco",
+    default: "Ayoub Sabi — Senior Software Engineer | PHP, Laravel & Backend | Morocco",
     template: "%s | Ayoub Sabi",
   },
   description,
   keywords: [
     "Ayoub Sabi",
     "software engineer",
+    "senior software engineer",
     "backend developer",
+    "backend engineer Morocco",
     "web developer",
+    "web developer Morocco",
+    "full stack developer Morocco",
     "laravel developer",
+    "laravel developer Morocco",
+    "PHP developer portfolio",
+    "Laravel developer portfolio",
     "symfony developer",
+    "API developer",
+    "geospatial developer",
+    "software engineer Rabat",
+    "engineer portfolio",
     "PHP",
     "Laravel",
     "Symfony",
@@ -52,27 +63,19 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Ayoub Sabi", url: "https://ayoubsabi.com" }],
   creator: "Ayoub Sabi",
+  category: "Technology",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://ayoubsabi.com",
-    title: "Ayoub Sabi — PHP & Laravel Software Engineer | Morocco",
+    title: "Ayoub Sabi — Senior Software Engineer | PHP, Laravel & Backend | Morocco",
     description,
     siteName: "Ayoub Sabi",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Ayoub Sabi — Software Engineer",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ayoub Sabi — PHP & Laravel Software Engineer | Morocco",
+    title: "Ayoub Sabi — Senior Software Engineer | PHP, Laravel & Backend | Morocco",
     description,
-    images: ["/og-image.png"],
     creator: "@ayoubsabi",
   },
   robots: {
@@ -90,68 +93,91 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  name: "Ayoub Sabi",
-  jobTitle: "Software Engineer",
-  url: "https://ayoubsabi.com",
-  email: "ayoubsabi@gmail.com",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Rabat",
-    addressCountry: "MA",
-  },
-  sameAs: [
-    "https://www.linkedin.com/in/ayoubsabi/",
-    "https://github.com/ayoubsabi",
-  ],
-  worksFor: {
-    "@type": "Organization",
-    name: "Done",
-    url: "https://done.ma",
-    description: "Morocco's first super app",
-  },
-  alumniOf: [
-    {
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Ayoub Sabi",
+    jobTitle: "Senior Software Engineer",
+    description:
+      "Senior Software Engineer specializing in PHP, Laravel, and Symfony with 6+ years of experience. Based in Rabat, Morocco. Expert in geospatial systems, real-time notifications, and high-performance backend architecture.",
+    url: "https://ayoubsabi.com",
+    image: "https://ayoubsabi.com/opengraph-image",
+    email: "ayoubsabi@gmail.com",
+    nationality: "Moroccan",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Rabat",
+      addressCountry: "MA",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "ayoubsabi@gmail.com",
+      contactType: "professional",
+    },
+    sameAs: [
+      "https://www.linkedin.com/in/ayoubsabi/",
+      "https://github.com/ayoubsabi",
+    ],
+    worksFor: {
       "@type": "Organization",
-      name: "Pyxicom",
+      name: "Done",
+      url: "https://done.ma",
+      description: "Morocco's first super app",
     },
-    {
-      "@type": "Organization",
-      name: "Fondation Med VI pour la Réinsertion des Détenus",
-    },
-  ],
-  knowsAbout: [
-    "PHP",
-    "Laravel",
-    "Symfony",
-    "JavaScript",
-    "React.js",
-    "PostgreSQL",
-    "PostGIS",
-    "PgRouting",
-    "Redis",
-    "MySQL",
-    "Firebase Cloud Messaging",
-    "ELK Stack",
-    "Typesense",
-    "REST APIs",
-    "Web Development",
-    "Backend Development",
-    "Geospatial Systems",
-  ],
-  hasOccupation: {
-    "@type": "Occupation",
-    name: "Software Engineer",
-    skills:
-      "PHP, Laravel, Symfony, React.js, PostgreSQL, PostGIS, PgRouting, Redis, Firebase Cloud Messaging, ELK Stack, Typesense",
-    occupationLocation: {
-      "@type": "Country",
-      name: "Morocco",
+    alumniOf: [
+      {
+        "@type": "Organization",
+        name: "Pyxicom",
+      },
+      {
+        "@type": "Organization",
+        name: "Fondation Med VI pour la Réinsertion des Détenus",
+      },
+    ],
+    knowsAbout: [
+      "PHP",
+      "Laravel",
+      "Symfony",
+      "JavaScript",
+      "React.js",
+      "PostgreSQL",
+      "PostGIS",
+      "PgRouting",
+      "Redis",
+      "MySQL",
+      "Firebase Cloud Messaging",
+      "ELK Stack",
+      "Typesense",
+      "REST APIs",
+      "Web Development",
+      "Backend Development",
+      "Geospatial Systems",
+    ],
+    hasOccupation: {
+      "@type": "Occupation",
+      name: "Senior Software Engineer",
+      skills:
+        "PHP, Laravel, Symfony, React.js, PostgreSQL, PostGIS, PgRouting, Redis, Firebase Cloud Messaging, ELK Stack, Typesense",
+      occupationLocation: {
+        "@type": "Country",
+        name: "Morocco",
+      },
     },
   },
-};
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Ayoub Sabi",
+    url: "https://ayoubsabi.com",
+    description:
+      "Portfolio of Ayoub Sabi, Senior Software Engineer specializing in PHP, Laravel, and backend architecture. Based in Rabat, Morocco.",
+    author: {
+      "@type": "Person",
+      name: "Ayoub Sabi",
+    },
+  },
+];
 
 export default function RootLayout({
   children,

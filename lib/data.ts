@@ -1,8 +1,8 @@
 export const profile = {
   name: "Ayoub Sabi",
-  title: "Software Engineer",
-  tagline: "5+ years building robust, scalable, and high-performance web applications.",
-  bio: "Software Engineer with 6+ years of experience building robust, scalable, and high-performance web applications. Expert in PHP and JavaScript frameworks, with a focus on clean, maintainable code and performance optimization for mission-critical projects. Passionate about continuous learning and exploring the latest technologies — including AI-augmented engineering with tools like Claude Code and GitHub Copilot.",
+  title: "Senior Software Engineer",
+  tagline: "Building high-performance backend systems with PHP, Laravel, Symfomy & geospatial expertise.",
+  bio: "Senior Software Engineer with 6+ years of experience designing and shipping production-grade web applications. Specialized in PHP, Laravel, and Symfony with deep expertise in geospatial systems, real-time dispatch, and high-throughput backend architecture. Built driver dispatch and order routing engines using PostGIS, PgRouting, and Redis Geospatial. Experienced with ELK Stack for observability and Typesense for search. I leverage AI-augmented engineering (Claude Code, GitHub Copilot) to ship faster without cutting corners.",
   email: "ayoubsabi@gmail.com",
   github: "https://github.com/ayoubsabi",
   linkedin: "https://www.linkedin.com/in/ayoubsabi/",
@@ -20,38 +20,31 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Project Alpha",
+    title: "Geospatial Dispatch Engine",
     description:
-      "A full-stack web application built with Next.js and PostgreSQL. Features real-time updates, authentication, and a responsive dashboard.",
-    tags: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind CSS"],
-    github: "https://github.com/ayoubsabi/project-alpha",
-    live: "https://project-alpha.vercel.app",
+      "Real-time order dispatch system that assigns delivery orders to the nearest available driver using Redis Geospatial indexes and PostGIS. Handles live driver location tracking and intelligent routing via PgRouting for optimal assignment at scale.",
+    tags: ["PHP", "Laravel", "Redis Geospatial", "PostGIS", "PgRouting", "PostgreSQL"],
     featured: true,
   },
   {
-    title: "Project Beta",
+    title: "Real-time Notification Service",
     description:
-      "An open-source CLI tool that automates repetitive development tasks. Used by over 200 developers to streamline their workflow.",
-    tags: ["Node.js", "TypeScript", "CLI"],
-    github: "https://github.com/ayoubsabi/project-beta",
+      "Event-driven push notification platform built on Firebase Cloud Messaging (FCM). Handles order lifecycle events, promotional broadcasts, and transactional alerts. Designed for high throughput with queued delivery and delivery tracking.",
+    tags: ["PHP", "Laravel", "Firebase Cloud Messaging", "Redis", "REST APIs"],
     featured: true,
   },
   {
-    title: "Project Gamma",
+    title: "Multi-tenant REST API Platform",
     description:
-      "A REST API service handling thousands of requests per day, built with Express and Redis for caching. Fully documented with OpenAPI.",
-    tags: ["Node.js", "Express", "Redis", "Docker"],
-    github: "https://github.com/ayoubsabi/project-gamma",
-    live: "https://project-gamma.vercel.app",
+      "Scalable multi-tenant REST API with granular role-based permission system, Redis caching, and Typesense-powered full-text search. Built with Laravel and fully documented with OpenAPI. Deployed across multiple client projects at Pyxicom.",
+    tags: ["PHP", "Laravel", "Symfony", "PostgreSQL", "Redis", "Typesense", "REST APIs"],
     featured: false,
   },
   {
-    title: "Project Delta",
+    title: "Observability & Monitoring Stack",
     description:
-      "A mobile-first e-commerce storefront with cart, checkout, and Stripe payment integration. Optimized for Core Web Vitals.",
-    tags: ["React", "Stripe", "Next.js", "Prisma"],
-    github: "https://github.com/ayoubsabi/project-delta",
-    live: "https://project-delta.vercel.app",
+      "Centralized logging and monitoring setup using the ELK Stack (Elasticsearch, Logstash, Kibana) integrated into a Laravel application. Provides real-time error tracking, request tracing, and performance dashboards for production systems.",
+    tags: ["ELK Stack", "ElasticSearch", "Laravel", "Docker", "PHP"],
     featured: false,
   },
 ];
@@ -85,7 +78,7 @@ export const experience: Experience[] = [
     role: "Senior Software Engineer",
     period: "Oct 2024 — Present",
     description:
-      "Working on Morocco's first super app, a platform integrating multiple services to simplify daily life. Key contributions include designing a granular permission system, building a real-time notification system for order lifecycle events and advertising push notifications via Firebase Cloud Messaging (FCM), and developing an intelligent geospatial dispatch system using Redis Geospatial Indexes to assign orders to the nearest available driver. Also implemented Redis Geospatial for real-time driver tracking, Typesense for fast and relevant search, and ELK Stack for centralized monitoring and observability.",
+      "Engineering core infrastructure for Morocco's first super app — a platform integrating delivery, mobility, and daily services at scale. Designed a granular role-based permission system for multi-service operations. Built a real-time geospatial dispatch engine using Redis Geospatial indexes and PostGIS to assign orders to the nearest available driver, with live driver tracking. Delivered a high-throughput push notification system via Firebase Cloud Messaging for order events and ad campaigns. Integrated Typesense for fast, relevant in-app search and deployed the ELK Stack for centralized observability across microservices.",
     skills: [
       "PHP",
       "Laravel",
@@ -104,7 +97,7 @@ export const experience: Experience[] = [
     role: "Software Engineer",
     period: "Oct 2019 — Oct 2024",
     description:
-      "Designed and developed complex web applications for multiple clients over nearly 5 years. Built secure and efficient REST APIs, integrated new modules, and maintained existing features. Focused on performance optimization and production deployments across Symfony and Laravel-based projects.",
+      "Designed and delivered complex web applications for clients across multiple industries over nearly 5 years. Architected and built secure, well-documented REST APIs, implemented new product features, and owned performance optimization for production systems. Worked primarily with Symfony and Laravel on both greenfield and legacy projects, collaborating closely with frontend teams using React.js.",
     skills: ["PHP", "Symfony", "Laravel", "React.js", "MySQL", "PostgreSQL", "REST APIs"],
   },
   {
@@ -112,7 +105,7 @@ export const experience: Experience[] = [
     role: "Web Developer Intern",
     period: "Dec 2018 — May 2019",
     description:
-      "Developed an internal expense management application from requirements analysis through delivery. Handled both back-end development with Symfony and front-end implementation with Bootstrap and modern JavaScript.",
+      "Built an internal expense management application end-to-end, from requirements analysis to production delivery. Developed the back-end with Symfony and the front-end with Bootstrap and vanilla JavaScript. First exposure to full project ownership and working within institutional constraints.",
     skills: ["PHP", "Symfony", "JavaScript", "MySQL", "Bootstrap"],
   },
 ];
