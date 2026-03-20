@@ -20,7 +20,7 @@ const item: Variants = {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center px-6 pt-16">
+    <section className="relative min-h-screen flex flex-col justify-center px-6 pt-28 md:pt-16 overflow-hidden">
       {/* Cold mesh + dot grid background */}
       <div className="absolute inset-0 pointer-events-none bg-mesh-cold bg-dot-grid" />
 

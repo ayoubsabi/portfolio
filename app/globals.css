@@ -43,6 +43,7 @@ html {
 body {
   background-color: #080d14;
   color: #e8f0fe;
+  overflow-x: hidden;
 }
 
 .bg-mesh-cold {
