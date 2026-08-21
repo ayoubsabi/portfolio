@@ -37,8 +37,8 @@
     "profile": {
       "name": "Ayoub Sabi",
       "title": "Senior Backend Developer",
-      "tagline": "Senior Backend Developer with 6+ years of experience in designing and developing web applications.",
-      "bio": "Senior backend developer with over 6 years of experience in the design and development of web applications. I have worked on several projects in different sectors, notably finance, insurance, and logistics. I mainly master the PHP frameworks Symfony and Laravel. I also have experience with Node.js and its Express.js framework. Throughout my career, I have participated in choosing technical architectures, developing APIs, integrating third-party services, and improving application performance. I adapt easily to new technologies and follow software development best practices to produce reliable, maintainable, and scalable solutions.",
+      "tagline": "Senior Backend Developer with 6+ years of experience designing and building web applications.",
+      "bio": "Senior Backend Engineer with 6+ years of experience designing and building scalable web applications. Specialized in PHP (Symfony, Laravel) and Node.js (Express.js). Domain expertise includes finance, insurance, and logistics systems. Responsible for technical architecture, REST API development, third-party integrations, and database performance optimization. Committed to software development best practices to deliver reliable and maintainable systems.",
       "email": "ayoub.sabi@gmail.com",
       "github": "https://github.com/ayoubsabi",
       "linkedin": "https://linkedin.com/in/ayoubsabi",
@@ -110,20 +110,20 @@
         "company": "Done",
         "role": "Senior Backend Developer",
         "period": "Oct 2024 — Jun 2026",
-        "description": "Led the development of logistics systems aimed at improving delivery automation, scalability, cost reduction, and operational visibility. In this context, I:\n- Developed an automatic order assignment system to the nearest available driver, reducing delivery times.\n- Reduced route calculation costs by replacing the Google Routes API with an OSRM-based solution.\n- Implemented a calendar system for managing driver availability with time slots and delivery zones.\n- Led the implementation of a Logistics as a Service (LaaS) solution, allowing third-party partner systems to integrate with our delivery infrastructure.\n- Developed a real-time notification system with Firebase Cloud Messaging to inform clients, drivers, and partners at every stage of the delivery.",
+        "description": "Architected logistics systems to improve delivery automation, scalability, and operational visibility.\n- Built an automatic order assignment engine to dispatch the nearest available driver, reducing delivery times.\n- Replaced Google Routes API with a self-hosted OSRM solution, significantly cutting route calculation costs.\n- Developed a time-slot calendar system for managing driver availability across delivery zones.\n- Architected a Logistics as a Service (LaaS) API for third-party partner integration.\n- Implemented real-time delivery tracking notifications using Firebase Cloud Messaging.",
         "skills": []
       },
       {
         "company": "Pyxicom",
         "role": "Backend Developer",
         "period": "Nov 2019 — Sep 2024",
-        "description": "Participated in the development and maintenance of web applications for clients in various industries, involved in the full project lifecycle from requirements analysis to production deployment. In this context, I:\n- Designed and developed web applications and REST APIs with Symfony and Laravel, consumed by interfaces developed with React and Next.js.\n- Documented APIs with OpenAPI (Swagger) to facilitate integration with frontend teams and third-party systems.\n- Led the migration of 5+ legacy CodeIgniter and Zend applications to Symfony and Laravel, completely rewriting the codebase with zero data loss or downtime.\n- Improved the performance of high-traffic MySQL and PostgreSQL databases by optimizing indexes and redesigning certain data schemas.\n- Integrated multiple third-party services and payment solutions in environments with strict business and regulatory constraints.",
+        "description": "Developed and maintained web applications and REST APIs for cross-industry clients.\n- Built backend systems using Symfony and Laravel for React and Next.js frontends.\n- Documented APIs using OpenAPI (Swagger) for frontend and third-party integration.\n- Migrated 5+ legacy CodeIgniter and Zend applications to Symfony and Laravel with zero data loss or downtime.\n- Optimized high-traffic MySQL and PostgreSQL databases by restructuring schemas and adding indexes.\n- Integrated multiple third-party services and payment gateways under strict regulatory requirements.",
         "skills": []
       }
     ]
   },
   "Metadata": {
     "title": "Ayoub Sabi — Senior Software Engineer | PHP, Laravel & Backend | Morocco",
-    "description": "Senior Software Engineer specializing in PHP, Laravel, and Symfony with 6+ years of experience. Based in Rabat, Morocco. Expert in geospatial systems, real-time notifications, and high-performance backend architecture."
+    "description": "Senior Software Engineer specializing in PHP, Laravel, and Symfony with 6+ years of experience. Based in Rabat, Morocco. Expert in geospatial systems, real-time APIs, and high-performance backend architecture."
   }
 }

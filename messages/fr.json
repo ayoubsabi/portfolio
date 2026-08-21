@@ -37,8 +37,8 @@
     "profile": {
       "name": "Ayoub Sabi",
       "title": "Développeur Backend Senior",
-      "tagline": "Développeur Backend Senior avec plus de 6 ans d'expérience dans la conception et le développement d'applications web.",
-      "bio": "Développeur backend senior avec plus de 6 ans d'expérience dans la conception et le développement d'applications web. J'ai travaillé sur plusieurs projets dans différents secteurs, notamment la finance, l'assurance et la logistique. Je maîtrise principalement les frameworks PHP Symfony et Laravel. J'ai aussi de l'expérience avec Node.js et son framework Express.js. Au cours de ma carrière, j'ai participé au choix des architectures techniques, au développement d'API, à l'intégration de services tiers et à l'amélioration des performances des applications. Je m'adapte facilement à de nouvelles technologies et je respecte les bonnes pratiques de développement logiciel afin de produire des solutions fiables, maintenables et évolutives.",
+      "tagline": "Développeur Backend Senior avec plus de 6 ans d'expérience dans la conception et la création d'applications web.",
+      "bio": "Ingénieur Logiciel Backend avec plus de 6 ans d'expérience dans la conception et le développement d'applications web scalables. Spécialisé en PHP (Symfony, Laravel) et Node.js (Express.js). Mon expertise sectorielle inclut les systèmes financiers, d'assurance et logistiques. Responsable de l'architecture technique, du développement d'API REST, de l'intégration de services tiers et de l'optimisation des performances des bases de données. Engagé dans les meilleures pratiques de développement logiciel pour livrer des systèmes fiables et maintenables.",
       "email": "ayoub.sabi@gmail.com",
       "github": "https://github.com/ayoubsabi",
       "linkedin": "https://linkedin.com/in/ayoubsabi",
@@ -110,20 +110,20 @@
         "company": "Done",
         "role": "Développeur Backend Senior",
         "period": "Oct 2024 — Juin 2026",
-        "description": "J'ai piloté le développement de systèmes logistiques visant à améliorer l'automatisation des livraisons, la scalabilité, la réduction des coûts et la visibilité opérationnelle. Dans ce cadre, j'ai :\n- Développé un système d'affectation automatique des commandes au livreur disponible le plus proche, ce qui a permis de réduire les délais de livraison.\n- Réduit les coûts liés au calcul des itinéraires en remplaçant l'API Google Routes par une solution basée sur OSRM.\n- Mis en place un système de calendrier pour la gestion des disponibilités des livreurs avec des créneaux horaires et des zones de livraison.\n- Piloté la mise en œuvre d'une solution de Logistics as a Service (LaaS), permettant à des systèmes partenaires tiers de s'intégrer à notre infrastructure de livraison.\n- Développé un système de notifications en temps réel avec Firebase Cloud Messaging pour informer les clients, les livreurs et les partenaires à chaque étape de la livraison.",
+        "description": "Architecture de systèmes logistiques pour améliorer l'automatisation des livraisons, la scalabilité et la visibilité opérationnelle.\n- Création d'un moteur d'affectation automatique des commandes au livreur le plus proche, réduisant les délais de livraison.\n- Remplacement de l'API Google Routes par une solution OSRM auto-hébergée, réduisant significativement les coûts de calcul d'itinéraire.\n- Développement d'un système de calendrier à créneaux horaires pour la gestion de la disponibilité des livreurs sur différentes zones.\n- Architecture d'une API Logistics as a Service (LaaS) pour l'intégration de partenaires tiers.\n- Implémentation de notifications de suivi de livraison en temps réel via Firebase Cloud Messaging.",
         "skills": []
       },
       {
         "company": "Pyxicom",
         "role": "Développeur Backend",
         "period": "Nov 2019 — Sep 2024",
-        "description": "J'ai participé au développement et à la maintenance d'applications web pour des clients de différents secteurs d'activité, en intervenant sur l'ensemble du cycle de vie des projets, de l'analyse des besoins jusqu'à la mise en production. Dans ce cadre, j'ai :\n- Conçu et développé des applications web et des API REST avec Symfony et Laravel, utilisées par des interfaces développées avec React et Next.js.\n- Documenté les API avec OpenAPI (Swagger) afin de faciliter l'intégration avec les équipes frontend et les systèmes tiers.\n- Piloté la migration de plus de 5 applications héritées de CodeIgniter et Zend vers Symfony et Laravel, en réalisant une refonte complète du code sans perte de données ni interruption de service.\n- Amélioré les performances de bases de données MySQL et PostgreSQL à fort trafic grâce à l'optimisation des index et à la refonte de certains schémas de données.\n- Intégré plusieurs services tiers et solutions de paiement dans des environnements soumis à des contraintes métier et réglementaires.",
+        "description": "Développement et maintenance d'applications web et d'API REST pour des clients intersectoriels.\n- Création de systèmes backend avec Symfony et Laravel pour des frontends React et Next.js.\n- Documentation des API via OpenAPI (Swagger) pour l'intégration frontend et tierce.\n- Migration de plus de 5 applications legacy CodeIgniter et Zend vers Symfony et Laravel sans perte de données ni temps d'arrêt.\n- Optimisation de bases de données MySQL et PostgreSQL à fort trafic en restructurant les schémas et en ajoutant des index.\n- Intégration de multiples services tiers et passerelles de paiement sous des exigences réglementaires strictes.",
         "skills": []
       }
     ]
   },
   "Metadata": {
     "title": "Ayoub Sabi — Ingénieur Logiciel Senior | PHP, Laravel & Backend | Maroc",
-    "description": "Ingénieur Logiciel Senior spécialisé en PHP, Laravel et Symfony avec plus de 6 ans d'expérience. Basé à Rabat, Maroc. Expert en systèmes géospatiaux, notifications en temps réel et architecture backend haute performance."
+    "description": "Ingénieur Logiciel Senior spécialisé en PHP, Laravel et Symfony avec plus de 6 ans d'expérience. Basé à Rabat, Maroc. Expert en systèmes géospatiaux, API en temps réel et architecture backend haute performance."
   }
 }
