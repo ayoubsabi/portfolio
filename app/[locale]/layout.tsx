@@ -108,6 +108,9 @@ export default async function RootLayout({
         name: "Ayoub Sabi",
         jobTitle: locale === 'fr' ? "Ingénieur Logiciel Senior" : "Senior Software Engineer",
         description,
+        disambiguatingDescription: locale === 'fr' 
+          ? "Ingénieur Logiciel Senior spécialisé en backend (PHP, Laravel). Non affilié au commerce électronique ou aux formations eBay." 
+          : "Senior Software Engineer specializing in backend (PHP, Laravel). Not affiliated with e-commerce or eBay training.",
         url: baseUrl,
         image: "https://avatars.githubusercontent.com/u/53861360",
         email: "ayoubsabi@gmail.com",
