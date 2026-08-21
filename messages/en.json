@@ -17,7 +17,7 @@
     "present": "Present"
   },
   "Skills": {
-    "title": "Technical Arsenal"
+    "title": "Technical Skills"
   },
   "Projects": {
     "title": "Featured Projects",
@@ -36,70 +36,89 @@
   "Data": {
     "profile": {
       "name": "Ayoub Sabi",
-      "title": "Senior Software Engineer",
-      "tagline": "Building high-performance backend systems with PHP, Laravel, Symfony & geospatial expertise.",
-      "bio": "Senior Software Engineer with 6+ years of experience designing and shipping production-grade web applications. Specialized in PHP, Laravel, and Symfony with deep expertise in geospatial systems, real-time dispatch, and high-throughput backend architecture. Built driver dispatch and order routing engines using PostGIS, PgRouting, and Redis Geospatial. Experienced with ELK Stack for observability and Typesense for search. I leverage AI-augmented engineering (Claude Code, GitHub Copilot) to ship faster without cutting corners.",
-      "email": "ayoubsabi@gmail.com",
+      "title": "Senior Backend Developer",
+      "tagline": "Senior Backend Developer with 6+ years of experience in designing and developing web applications.",
+      "bio": "Senior backend developer with over 6 years of experience in the design and development of web applications. I have worked on several projects in different sectors, notably finance, insurance, and logistics. I mainly master the PHP frameworks Symfony and Laravel. I also have experience with Node.js and its Express.js framework. Throughout my career, I have participated in choosing technical architectures, developing APIs, integrating third-party services, and improving application performance. I adapt easily to new technologies and follow software development best practices to produce reliable, maintainable, and scalable solutions.",
+      "email": "ayoub.sabi@gmail.com",
       "github": "https://github.com/ayoubsabi",
-      "linkedin": "https://www.linkedin.com/in/ayoubsabi/",
-      "location": "Morocco"
+      "linkedin": "https://linkedin.com/in/ayoubsabi",
+      "location": "Rabat, Morocco"
     },
-    "projects": [
-      {
-        "title": "Geospatial Dispatch Engine",
-        "description": "Real-time order dispatch system that assigns delivery orders to the nearest available driver using Redis Geospatial indexes and PostGIS. Handles live driver location tracking and intelligent routing via PgRouting for optimal assignment at scale.",
-        "tags": ["PHP", "Laravel", "Redis Geospatial", "PostGIS", "PgRouting", "PostgreSQL"],
-        "featured": true
-      },
-      {
-        "title": "Real-time Notification Service",
-        "description": "Event-driven push notification platform built on Firebase Cloud Messaging (FCM). Handles order lifecycle events, promotional broadcasts, and transactional alerts. Designed for high throughput with queued delivery and delivery tracking.",
-        "tags": ["PHP", "Laravel", "Firebase Cloud Messaging", "Redis", "REST APIs"],
-        "featured": true
-      },
-      {
-        "title": "Multi-tenant REST API Platform",
-        "description": "Scalable multi-tenant REST API with granular role-based permission system, Redis caching, and Typesense-powered full-text search. Built with Laravel and fully documented with OpenAPI. Deployed across multiple client projects at Pyxicom.",
-        "tags": ["PHP", "Laravel", "Symfony", "PostgreSQL", "Redis", "Typesense", "REST APIs"],
-        "featured": false
-      },
-      {
-        "title": "Observability & Monitoring Stack",
-        "description": "Centralized logging and monitoring setup using the ELK Stack (Elasticsearch, Logstash, Kibana) integrated into a Laravel application. Provides real-time error tracking, request tracing, and performance dashboards for production systems.",
-        "tags": ["ELK Stack", "ElasticSearch", "Laravel", "Docker", "PHP"],
-        "featured": false
-      }
-    ],
+    "projects": [],
     "skills": [
-      { "category": "Backend", "skills": ["PHP", "Laravel", "Symfony", "Python"] },
-      { "category": "Frontend", "skills": ["React.js", "JavaScript", "Bootstrap"] },
-      { "category": "Databases", "skills": ["PostgreSQL", "MySQL"] },
-      { "category": "Caching", "skills": ["Redis", "Memcached"] },
-      { "category": "Search & Observability", "skills": ["Typesense", "ElasticSearch", "ELK Stack"] },
-      { "category": "APIs & Messaging", "skills": ["REST APIs", "Firebase Cloud Messaging"] },
-      { "category": "Geo Data", "skills": ["Redis Geospatial", "PostGIS", "PgRouting"] }
+      {
+        "category": "Programming Languages",
+        "skills": [
+          "PHP",
+          "JavaScript",
+          "TypeScript"
+        ]
+      },
+      {
+        "category": "Frameworks",
+        "skills": [
+          "Symfony",
+          "Laravel",
+          "Express.js"
+        ]
+      },
+      {
+        "category": "Databases",
+        "skills": [
+          "PostgreSQL",
+          "MySQL",
+          "MongoDB"
+        ]
+      },
+      {
+        "category": "Search & Caching",
+        "skills": [
+          "Elasticsearch",
+          "Redis",
+          "Memcached"
+        ]
+      },
+      {
+        "category": "Geospatial Systems",
+        "skills": [
+          "PostGIS",
+          "Redis (geospatial)",
+          "OSRM"
+        ]
+      },
+      {
+        "category": "DevOps & Infrastructure",
+        "skills": [
+          "Docker",
+          "Ansible (AWX)",
+          "GitHub Actions",
+          "ELK Stack"
+        ]
+      },
+      {
+        "category": "Tools & Practices",
+        "skills": [
+          "Git",
+          "OpenAPI (Swagger)",
+          "Code review & QA",
+          "Agile methodologies"
+        ]
+      }
     ],
     "experience": [
       {
         "company": "Done",
-        "role": "Senior Software Engineer",
-        "period": "Oct 2024 — Present",
-        "description": "Engineering core infrastructure for Morocco's first super app — a platform integrating delivery, mobility, and daily services at scale. Designed a granular role-based permission system for multi-service operations. Built a real-time geospatial dispatch engine using Redis Geospatial indexes and PostGIS to assign orders to the nearest available driver, with live driver tracking. Delivered a high-throughput push notification system via Firebase Cloud Messaging for order events and ad campaigns. Integrated Typesense for fast, relevant in-app search and deployed the ELK Stack for centralized observability across microservices.",
-        "skills": ["PHP", "Laravel", "PostgreSQL", "PostGIS", "PgRouting", "Redis Geospatial", "Firebase Cloud Messaging", "Memcached", "ELK Stack", "Typesense"]
+        "role": "Senior Backend Developer",
+        "period": "Oct 2024 — Jun 2026",
+        "description": "Led the development of logistics systems aimed at improving delivery automation, scalability, cost reduction, and operational visibility. In this context, I:\n- Developed an automatic order assignment system to the nearest available driver, reducing delivery times.\n- Reduced route calculation costs by replacing the Google Routes API with an OSRM-based solution.\n- Implemented a calendar system for managing driver availability with time slots and delivery zones.\n- Led the implementation of a Logistics as a Service (LaaS) solution, allowing third-party partner systems to integrate with our delivery infrastructure.\n- Developed a real-time notification system with Firebase Cloud Messaging to inform clients, drivers, and partners at every stage of the delivery.",
+        "skills": []
       },
       {
         "company": "Pyxicom",
-        "role": "Software Engineer",
-        "period": "Oct 2019 — Oct 2024",
-        "description": "Designed and delivered complex web applications for clients across multiple industries over nearly 5 years. Architected and built secure, well-documented REST APIs, implemented new product features, and owned performance optimization for production systems. Worked primarily with Symfony and Laravel on both greenfield and legacy projects, collaborating closely with frontend teams using React.js.",
-        "skills": ["PHP", "Symfony", "Laravel", "React.js", "MySQL", "PostgreSQL", "REST APIs"]
-      },
-      {
-        "company": "Fondation Med VI pour la Réinsertion des Détenus",
-        "role": "Web Developer Intern",
-        "period": "Dec 2018 — May 2019",
-        "description": "Built an internal expense management application end-to-end, from requirements analysis to production delivery. Developed the back-end with Symfony and the front-end with Bootstrap and vanilla JavaScript. First exposure to full project ownership and working within institutional constraints.",
-        "skills": ["PHP", "Symfony", "JavaScript", "MySQL", "Bootstrap"]
+        "role": "Backend Developer",
+        "period": "Nov 2019 — Sep 2024",
+        "description": "Participated in the development and maintenance of web applications for clients in various industries, involved in the full project lifecycle from requirements analysis to production deployment. In this context, I:\n- Designed and developed web applications and REST APIs with Symfony and Laravel, consumed by interfaces developed with React and Next.js.\n- Documented APIs with OpenAPI (Swagger) to facilitate integration with frontend teams and third-party systems.\n- Led the migration of 5+ legacy CodeIgniter and Zend applications to Symfony and Laravel, completely rewriting the codebase with zero data loss or downtime.\n- Improved the performance of high-traffic MySQL and PostgreSQL databases by optimizing indexes and redesigning certain data schemas.\n- Integrated multiple third-party services and payment solutions in environments with strict business and regulatory constraints.",
+        "skills": []
       }
     ]
   },

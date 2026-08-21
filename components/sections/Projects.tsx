@@ -79,6 +79,10 @@ export default function Projects() {
 
   const projectsArray = data.raw("projects") as ProjectType[];
 
+  if (!projectsArray || projectsArray.length === 0) {
+    return null;
+  }
+
   return (
     <section id="projects" className="py-24 px-6">
       <div className="max-w-5xl mx-auto">

@@ -18,6 +18,45 @@ function ExperienceItem({
   item: ExperienceType;
   index: number;
 }) {
+  const lines = item.description.split('\n');
+  const content = [];
+  let currentList: string[] = [];
+
+  lines.forEach((line, i) => {
+    const trimmed = line.trim();
+    if (trimmed.startsWith('-')) {
+      currentList.push(trimmed.substring(1).trim());
+    } else {
+      if (currentList.length > 0) {
+        content.push(
+          <ul key={`ul-${i}`} className="list-disc list-outside ml-4 space-y-1 mb-2">
+            {currentList.map((li, j) => (
+              <li key={j}>{li}</li>
+            ))}
+          </ul>
+        );
+        currentList = [];
+      }
+      if (trimmed) {
+        content.push(
+          <p key={`p-${i}`} className="mb-2 last:mb-0">
+            {trimmed}
+          </p>
+        );
+      }
+    }
+  });
+
+  if (currentList.length > 0) {
+    content.push(
+      <ul key="ul-last" className="list-disc list-outside ml-4 space-y-1 mb-0">
+        {currentList.map((li, j) => (
+          <li key={j}>{li}</li>
+        ))}
+      </ul>
+    );
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0, x: -24 }}
@@ -39,9 +78,9 @@ function ExperienceItem({
         </span>
       </div>
 
-      <p className="text-muted text-sm leading-[1.75] mb-4">
-        {item.description}
-      </p>
+      <div className="text-muted text-sm leading-[1.75] mb-4">
+        {content}
+      </div>
 
       <div className="flex flex-wrap gap-2">
         {item.skills.map((skill) => (
