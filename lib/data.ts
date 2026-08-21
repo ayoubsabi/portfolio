@@ -110,3 +110,25 @@ export const experience: Experience[] = [
     skills: ["PHP", "Symfony", "JavaScript", "MySQL", "Bootstrap"],
   },
 ];
+
+export type Education = {
+  institution: string;
+  degree: string;
+  period: string;
+  location: string;
+};
+
+export const education: Education[] = [
+  {
+    institution: "Ecole High-Tech",
+    degree: "Master en Génie Logiciel",
+    period: "Sep 2020 — Nov 2023",
+    location: "Rabat, Morocco"
+  },
+  {
+    institution: "ISTA NTIC",
+    degree: "Technicien spécialisé en Techniques de Développement Multimédia",
+    period: "Sep 2017 — Jun 2019",
+    location: "Rabat, Morocco"
+  }
+];

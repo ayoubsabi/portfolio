@@ -16,6 +16,9 @@
     "title": "Where I've Worked",
     "present": "Present"
   },
+  "Education": {
+    "title": "Education"
+  },
   "Skills": {
     "title": "Technical Skills"
   },
@@ -119,6 +122,20 @@
         "period": "Nov 2019 — Sep 2024",
         "description": "Developed and maintained web applications and REST APIs for cross-industry clients.\n- Built backend systems using Symfony and Laravel for React and Next.js frontends.\n- Documented APIs using OpenAPI (Swagger) for frontend and third-party integration.\n- Migrated 5+ legacy CodeIgniter and Zend applications to Symfony and Laravel with zero data loss or downtime.\n- Optimized high-traffic MySQL and PostgreSQL databases by restructuring schemas and adding indexes.\n- Integrated multiple third-party services and payment gateways under strict regulatory requirements.",
         "skills": []
+      }
+    ],
+    "education": [
+      {
+        "institution": "Ecole High-Tech",
+        "degree": "Master in Software Engineering",
+        "period": "Sep 2020 — Nov 2023",
+        "location": "Rabat, Morocco"
+      },
+      {
+        "institution": "ISTA NTIC",
+        "degree": "Specialized Technician in Multimedia Development Techniques",
+        "period": "Sep 2017 — Jun 2019",
+        "location": "Rabat, Morocco"
       }
     ]
   },

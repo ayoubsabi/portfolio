@@ -16,6 +16,9 @@
     "title": "Mon Expérience",
     "present": "Présent"
   },
+  "Education": {
+    "title": "Formation"
+  },
   "Skills": {
     "title": "Compétences Techniques"
   },
@@ -119,6 +122,20 @@
         "period": "Nov 2019 — Sep 2024",
         "description": "Développement et maintenance d'applications web et d'API REST pour des clients intersectoriels.\n- Création de systèmes backend avec Symfony et Laravel pour des frontends React et Next.js.\n- Documentation des API via OpenAPI (Swagger) pour l'intégration frontend et tierce.\n- Migration de plus de 5 applications legacy CodeIgniter et Zend vers Symfony et Laravel sans perte de données ni temps d'arrêt.\n- Optimisation de bases de données MySQL et PostgreSQL à fort trafic en restructurant les schémas et en ajoutant des index.\n- Intégration de multiples services tiers et passerelles de paiement sous des exigences réglementaires strictes.",
         "skills": []
+      }
+    ],
+    "education": [
+      {
+        "institution": "Ecole High-Tech",
+        "degree": "Master en Génie Logiciel",
+        "period": "Sep 2020 — Nov 2023",
+        "location": "Rabat, Maroc"
+      },
+      {
+        "institution": "ISTA NTIC",
+        "degree": "Technicien spécialisé en Techniques de Développement Multimédia",
+        "period": "Sep 2017 — Juin 2019",
+        "location": "Rabat, Maroc"
       }
     ]
   },
