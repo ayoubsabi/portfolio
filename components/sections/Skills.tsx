@@ -1,7 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { skills, type SkillCategory } from "@/lib/data";
+import { useTranslations } from "next-intl";
+
+type SkillCategory = {
+  category: string;
+  skills: string[];
+};
 
 function SkillGroup({ item, index }: { item: SkillCategory; index: number }) {
   return (
@@ -29,6 +34,11 @@ function SkillGroup({ item, index }: { item: SkillCategory; index: number }) {
 }
 
 export default function Skills() {
+  const t = useTranslations("Skills");
+  const data = useTranslations("Data");
+
+  const skillsArray = data.raw("skills") as SkillCategory[];
+
   return (
     <section id="skills" className="py-20 px-6">
       <div className="max-w-5xl mx-auto">
@@ -46,12 +56,12 @@ export default function Skills() {
             </p>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight">
-            Skills
+            {t("title")}
           </h2>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-10">
-          {skills.map((item, i) => (
+          {skillsArray.map((item, i) => (
             <SkillGroup key={item.category} item={item} index={i} />
           ))}
         </div>

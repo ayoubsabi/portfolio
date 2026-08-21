@@ -1,13 +1,21 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { experience, type Experience } from "@/lib/data";
+import { useTranslations } from "next-intl";
+
+type ExperienceType = {
+  company: string;
+  role: string;
+  period: string;
+  description: string;
+  skills: string[];
+};
 
 function ExperienceItem({
   item,
   index,
 }: {
-  item: Experience;
+  item: ExperienceType;
   index: number;
 }) {
   return (
@@ -50,6 +58,12 @@ function ExperienceItem({
 }
 
 export default function Experience() {
+  const t = useTranslations("Experience");
+  const data = useTranslations("Data");
+  
+  // Use .raw to get the array from messages
+  const experienceArray = data.raw("experience") as ExperienceType[];
+
   return (
     <section id="experience" className="py-24 px-6">
       <div className="max-w-5xl mx-auto">
@@ -67,7 +81,7 @@ export default function Experience() {
             </p>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight">
-            Experience
+            {t("title")}
           </h2>
         </motion.div>
 
@@ -77,7 +91,7 @@ export default function Experience() {
           <div className="absolute left-[4px] top-2 bottom-4 w-px bg-gradient-to-b from-accent/40 via-border to-transparent" />
 
           <div className="flex flex-col gap-14">
-            {experience.map((exp, i) => (
+            {experienceArray.map((exp, i) => (
               <ExperienceItem key={exp.company + exp.role} item={exp} index={i} />
             ))}
           </div>

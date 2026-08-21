@@ -2,7 +2,7 @@
 
 import { motion, type Variants } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
-import { profile } from "@/lib/data";
+import { useTranslations } from "next-intl";
 
 const container: Variants = {
   hidden: {},
@@ -19,6 +19,9 @@ const item: Variants = {
 };
 
 export default function Hero() {
+  const t = useTranslations("Hero");
+  const data = useTranslations("Data.profile");
+
   return (
     <section className="relative min-h-screen flex flex-col justify-center px-6 pt-28 md:pt-16 overflow-hidden">
       {/* Cold mesh + dot grid background */}
@@ -39,7 +42,7 @@ export default function Hero() {
           <motion.div variants={item} className="flex items-center gap-3">
             <span className="h-px w-8 bg-accent" />
             <p className="text-accent text-xs font-mono tracking-[0.25em] uppercase">
-              Available for Work
+              {t("greeting")}
             </p>
           </motion.div>
 
@@ -47,21 +50,21 @@ export default function Hero() {
             variants={item}
             className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.05]"
           >
-            {profile.name}
+            {data("name")}
           </motion.h1>
 
           <motion.h2
             variants={item}
             className="text-2xl sm:text-3xl lg:text-4xl font-light text-foreground/60"
           >
-            {profile.title}
+            {data("title")}
           </motion.h2>
 
           <motion.p
             variants={item}
             className="text-muted text-lg max-w-xl leading-relaxed"
           >
-            {profile.bio}
+            {data("bio")}
           </motion.p>
 
           <motion.div
@@ -76,7 +79,7 @@ export default function Hero() {
               }
               className="px-6 py-3 bg-accent text-bg rounded-full text-sm font-medium hover:bg-accent/90 transition-all hover:shadow-[0_0_24px_rgba(56,189,248,0.4)] cursor-pointer"
             >
-              View Projects
+              {t("viewWork")}
             </button>
             <button
               onClick={() =>
@@ -86,7 +89,7 @@ export default function Hero() {
               }
               className="px-6 py-3 border border-border text-foreground rounded-full text-sm font-medium hover:border-accent hover:text-accent transition-all cursor-pointer"
             >
-              Get in Touch
+              {t("cta")}
             </button>
           </motion.div>
 
@@ -95,7 +98,7 @@ export default function Hero() {
             className="flex items-center gap-3 pt-2"
           >
             <a
-              href={profile.github}
+              href={data("github")}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
@@ -104,7 +107,7 @@ export default function Hero() {
               <Github size={20} />
             </a>
             <a
-              href={profile.linkedin}
+              href={data("linkedin")}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -113,7 +116,7 @@ export default function Hero() {
               <Linkedin size={20} />
             </a>
             <a
-              href={`mailto:${profile.email}`}
+              href={`mailto:${data("email")}`}
               aria-label="Email"
               className="p-2 text-muted hover:text-foreground transition-colors"
             >

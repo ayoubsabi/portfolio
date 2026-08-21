@@ -3,17 +3,20 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Github, Menu, X } from "lucide-react";
-import { profile } from "@/lib/data";
-
-const navLinks = [
-  { label: "Experience", href: "#experience" },
-  { label: "Skills", href: "#skills" },
-  { label: "Contact", href: "#contact" },
-];
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useTranslations } from "next-intl";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const t = useTranslations("Navigation");
+  const data = useTranslations("Data.profile");
+
+  const navLinks = [
+    { label: t("experience"), href: "#experience" },
+    { label: t("skills"), href: "#skills" },
+    { label: t("contact"), href: "#contact" },
+  ];
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 20);
@@ -45,7 +48,7 @@ export default function Navbar() {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         >
-          {profile.name
+          {data("name")
             .split(" ")
             .map((n) => n[0])
             .join("")}
@@ -53,7 +56,7 @@ export default function Navbar() {
         </a>
 
         {/* Desktop nav */}
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
             <li key={link.href}>
               <button
@@ -66,7 +69,7 @@ export default function Navbar() {
           ))}
           <li>
             <a
-              href={profile.github}
+              href={data("github")}
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-muted hover:text-foreground transition-colors flex items-center gap-1.5"
@@ -75,16 +78,22 @@ export default function Navbar() {
               GitHub
             </a>
           </li>
+          <li>
+            <LanguageSwitcher />
+          </li>
         </ul>
 
-        {/* Mobile menu button */}
-        <button
-          className="md:hidden p-2 text-muted hover:text-foreground transition-colors"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-        >
-          {menuOpen ? <X size={20} /> : <Menu size={20} />}
-        </button>
+        {/* Mobile nav buttons */}
+        <div className="md:hidden flex items-center gap-4">
+          <LanguageSwitcher />
+          <button
+            className="p-2 text-muted hover:text-foreground transition-colors"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            {menuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile menu */}
@@ -110,7 +119,7 @@ export default function Navbar() {
               ))}
               <li>
                 <a
-                  href={profile.github}
+                  href={data("github")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="py-3 flex items-center gap-1.5 text-muted hover:text-foreground transition-colors text-sm"

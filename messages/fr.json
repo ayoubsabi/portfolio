@@ -1,0 +1,110 @@
+{
+  "Navigation": {
+    "about": "À propos",
+    "experience": "Expérience",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "contact": "Contact",
+    "resume": "CV"
+  },
+  "Hero": {
+    "greeting": "Bonjour, je suis",
+    "cta": "Me Contacter",
+    "viewWork": "Voir Mon Travail"
+  },
+  "Experience": {
+    "title": "Mon Expérience",
+    "present": "Présent"
+  },
+  "Skills": {
+    "title": "Arsenal Technique"
+  },
+  "Projects": {
+    "title": "Projets Phares",
+    "viewCode": "Code",
+    "viewLive": "En Direct"
+  },
+  "Contact": {
+    "title": "Prendre Contact",
+    "description": "Je suis actuellement ouvert à de nouvelles opportunités. Que vous ayez une question ou que vous souhaitiez simplement dire bonjour, je ferai de mon mieux pour vous répondre !",
+    "button": "Dire Bonjour"
+  },
+  "Footer": {
+    "builtWith": "Conçu & Développé par",
+    "rights": "Tous droits réservés."
+  },
+  "Data": {
+    "profile": {
+      "name": "Ayoub Sabi",
+      "title": "Ingénieur Logiciel Senior",
+      "tagline": "Création de systèmes backend haute performance avec PHP, Laravel, Symfony & expertise géospatiale.",
+      "bio": "Ingénieur Logiciel Senior avec plus de 6 ans d'expérience dans la conception et le déploiement d'applications web de niveau production. Spécialisé en PHP, Laravel et Symfony avec une expertise pointue dans les systèmes géospatiaux, la répartition en temps réel et l'architecture backend à haut débit. J'ai construit des moteurs de dispatching de chauffeurs et d'acheminement de commandes utilisant PostGIS, PgRouting et Redis Geospatial. Expérimenté avec la suite ELK pour l'observabilité et Typesense pour la recherche. J'utilise l'ingénierie augmentée par l'IA (Claude Code, GitHub Copilot) pour livrer plus rapidement sans compromis sur la qualité.",
+      "email": "ayoubsabi@gmail.com",
+      "github": "https://github.com/ayoubsabi",
+      "linkedin": "https://www.linkedin.com/in/ayoubsabi/",
+      "location": "Maroc"
+    },
+    "projects": [
+      {
+        "title": "Moteur de Dispatching Géospatial",
+        "description": "Système de répartition de commandes en temps réel qui affecte les livraisons au chauffeur disponible le plus proche à l'aide des index Redis Geospatial et de PostGIS. Gère le suivi de la localisation des chauffeurs en direct et l'acheminement intelligent via PgRouting pour une affectation optimale à grande échelle.",
+        "tags": ["PHP", "Laravel", "Redis Geospatial", "PostGIS", "PgRouting", "PostgreSQL"],
+        "featured": true
+      },
+      {
+        "title": "Service de Notification en Temps Réel",
+        "description": "Plateforme de notifications push orientée événements construite sur Firebase Cloud Messaging (FCM). Gère les événements du cycle de vie des commandes, les diffusions promotionnelles et les alertes transactionnelles. Conçue pour un débit élevé avec livraison en file d'attente et suivi des livraisons.",
+        "tags": ["PHP", "Laravel", "Firebase Cloud Messaging", "Redis", "REST APIs"],
+        "featured": true
+      },
+      {
+        "title": "Plateforme d'API REST Multi-locataires",
+        "description": "API REST multi-locataires évolutive avec un système granulaire de permissions basées sur les rôles, mise en cache Redis et recherche en texte intégral propulsée par Typesense. Construite avec Laravel et entièrement documentée avec OpenAPI. Déployée sur plusieurs projets clients chez Pyxicom.",
+        "tags": ["PHP", "Laravel", "Symfony", "PostgreSQL", "Redis", "Typesense", "REST APIs"],
+        "featured": false
+      },
+      {
+        "title": "Stack d'Observabilité & de Monitoring",
+        "description": "Mise en place de la journalisation et de la surveillance centralisées à l'aide de la pile ELK (Elasticsearch, Logstash, Kibana) intégrée dans une application Laravel. Fournit un suivi des erreurs en temps réel, le traçage des requêtes et des tableaux de bord de performance pour les systèmes de production.",
+        "tags": ["ELK Stack", "ElasticSearch", "Laravel", "Docker", "PHP"],
+        "featured": false
+      }
+    ],
+    "skills": [
+      { "category": "Backend", "skills": ["PHP", "Laravel", "Symfony", "Python"] },
+      { "category": "Frontend", "skills": ["React.js", "JavaScript", "Bootstrap"] },
+      { "category": "Bases de données", "skills": ["PostgreSQL", "MySQL"] },
+      { "category": "Mise en cache", "skills": ["Redis", "Memcached"] },
+      { "category": "Recherche & Observabilité", "skills": ["Typesense", "ElasticSearch", "ELK Stack"] },
+      { "category": "APIs & Messagerie", "skills": ["REST APIs", "Firebase Cloud Messaging"] },
+      { "category": "Données Géo", "skills": ["Redis Geospatial", "PostGIS", "PgRouting"] }
+    ],
+    "experience": [
+      {
+        "company": "Done",
+        "role": "Ingénieur Logiciel Senior",
+        "period": "Oct 2024 — Présent",
+        "description": "Développement de l'infrastructure de base pour la première super application du Maroc — une plateforme intégrant la livraison, la mobilité et les services quotidiens à grande échelle. Conception d'un système granulaire de permissions basées sur les rôles pour les opérations multi-services. Création d'un moteur de dispatching géospatial en temps réel à l'aide des index Redis Geospatial et de PostGIS pour affecter les commandes au chauffeur disponible le plus proche, avec suivi en direct. Livraison d'un système de notification push à haut débit via Firebase Cloud Messaging pour les événements de commande et les campagnes publicitaires. Intégration de Typesense pour une recherche intégrée rapide et pertinente et déploiement de la pile ELK pour l'observabilité centralisée à travers les microservices.",
+        "skills": ["PHP", "Laravel", "PostgreSQL", "PostGIS", "PgRouting", "Redis Geospatial", "Firebase Cloud Messaging", "Memcached", "ELK Stack", "Typesense"]
+      },
+      {
+        "company": "Pyxicom",
+        "role": "Ingénieur Logiciel",
+        "period": "Oct 2019 — Oct 2024",
+        "description": "Conception et livraison d'applications web complexes pour des clients dans de multiples secteurs d'activité pendant près de 5 ans. Architecture et développement d'APIs REST sécurisées et bien documentées, mise en œuvre de nouvelles fonctionnalités produits, et optimisation des performances pour les systèmes de production. Travail principalement avec Symfony et Laravel sur des projets nouveaux et existants, en collaboration étroite avec les équipes frontend utilisant React.js.",
+        "skills": ["PHP", "Symfony", "Laravel", "React.js", "MySQL", "PostgreSQL", "REST APIs"]
+      },
+      {
+        "company": "Fondation Med VI pour la Réinsertion des Détenus",
+        "role": "Stagiaire Développeur Web",
+        "period": "Déc 2018 — Mai 2019",
+        "description": "Création d'une application interne de gestion des dépenses de bout en bout, de l'analyse des besoins à la mise en production. Développement du back-end avec Symfony et du front-end avec Bootstrap et JavaScript natif. Première expérience de la prise en charge complète d'un projet et du travail sous des contraintes institutionnelles.",
+        "skills": ["PHP", "Symfony", "JavaScript", "MySQL", "Bootstrap"]
+      }
+    ]
+  },
+  "Metadata": {
+    "title": "Ayoub Sabi — Ingénieur Logiciel Senior | PHP, Laravel & Backend | Maroc",
+    "description": "Ingénieur Logiciel Senior spécialisé en PHP, Laravel et Symfony avec plus de 6 ans d'expérience. Basé à Rabat, Maroc. Expert en systèmes géospatiaux, notifications en temps réel et architecture backend haute performance."
+  }
+}

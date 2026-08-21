@@ -2,9 +2,18 @@
 
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
-import { projects, type Project } from "@/lib/data";
+import { useTranslations } from "next-intl";
 
-function ProjectCard({ project, index }: { project: Project; index: number }) {
+type ProjectType = {
+  title: string;
+  description: string;
+  tags: string[];
+  github?: string;
+  live?: string;
+  featured?: boolean;
+};
+
+function ProjectCard({ project, index }: { project: ProjectType; index: number }) {
   return (
     <motion.article
       initial={{ opacity: 0, y: 32 }}
@@ -65,6 +74,11 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 }
 
 export default function Projects() {
+  const t = useTranslations("Projects");
+  const data = useTranslations("Data");
+
+  const projectsArray = data.raw("projects") as ProjectType[];
+
   return (
     <section id="projects" className="py-24 px-6">
       <div className="max-w-5xl mx-auto">
@@ -82,12 +96,12 @@ export default function Projects() {
             </p>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight">
-            Selected Projects
+            {t("title")}
           </h2>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {projects.map((project, i) => (
+          {projectsArray.map((project, i) => (
             <ProjectCard key={project.title} project={project} index={i} />
           ))}
         </div>
