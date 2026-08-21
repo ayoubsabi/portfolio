@@ -69,7 +69,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       },
     },
     alternates: {
-      canonical: "https://ayoubsabi.com",
+      canonical: `https://ayoubsabi.com/${locale}`,
+      languages: {
+        en: "https://ayoubsabi.com/en",
+        fr: "https://ayoubsabi.com/fr",
+        "x-default": "https://ayoubsabi.com/en",
+      },
     },
   };
 }
@@ -91,69 +96,76 @@ export default async function RootLayout({
   const t = await getTranslations({ locale, namespace: 'Metadata' });
   const description = t('description');
 
+  const baseUrl = `https://ayoubsabi.com/${locale}`;
   const jsonLd = [
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      name: "Ayoub Sabi",
-      jobTitle: locale === 'fr' ? "Ingénieur Logiciel Senior" : "Senior Software Engineer",
-      description,
-      url: "https://ayoubsabi.com",
-      image: "https://ayoubsabi.com/opengraph-image",
-      email: "ayoubsabi@gmail.com",
-      nationality: locale === 'fr' ? "Marocain" : "Moroccan",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Rabat",
-        addressCountry: "MA",
-      },
-      contactPoint: {
-        "@type": "ContactPoint",
+      "@type": "ProfilePage",
+      dateCreated: "2024-01-01T00:00:00+00:00",
+      dateModified: new Date().toISOString(),
+      mainEntity: {
+        "@type": "Person",
+        name: "Ayoub Sabi",
+        jobTitle: locale === 'fr' ? "Ingénieur Logiciel Senior" : "Senior Software Engineer",
+        description,
+        url: baseUrl,
+        image: "https://avatars.githubusercontent.com/u/53861360",
         email: "ayoubsabi@gmail.com",
-        contactType: "professional",
-      },
-      sameAs: [
-        "https://www.linkedin.com/in/ayoubsabi/",
-        "https://github.com/ayoubsabi",
-      ],
-      worksFor: {
-        "@type": "Organization",
-        name: "Done",
-        url: "https://done.ma",
-        description: locale === 'fr' ? "Première super application du Maroc" : "Morocco's first super app",
-      },
-      alumniOf: [
-        {
+        nationality: locale === 'fr' ? "Marocain" : "Moroccan",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Rabat",
+          addressCountry: "MA",
+        },
+        contactPoint: {
+          "@type": "ContactPoint",
+          email: "ayoubsabi@gmail.com",
+          contactType: "professional",
+        },
+        sameAs: [
+          "https://www.linkedin.com/in/ayoubsabi/",
+          "https://github.com/ayoubsabi",
+        ],
+        worksFor: {
           "@type": "Organization",
-          name: "Pyxicom",
+          name: "Done",
+          url: "https://done.ma",
+          description: locale === 'fr' ? "Première super application du Maroc" : "Morocco's first super app",
         },
-        {
-          "@type": "Organization",
-          name: "Fondation Med VI pour la Réinsertion des Détenus",
+        alumniOf: [
+          {
+            "@type": "Organization",
+            name: "Pyxicom",
+            url: "https://pyxicom.com",
+          },
+          {
+            "@type": "Organization",
+            name: "Fondation Med VI pour la Réinsertion des Détenus",
+          },
+        ],
+        knowsAbout: [
+          "PHP", "Laravel", "Symfony", "JavaScript", "React.js", "PostgreSQL",
+          "PostGIS", "PgRouting", "Redis", "MySQL", "Firebase Cloud Messaging",
+          "ELK Stack", "Typesense", "REST APIs", "Web Development",
+          "Backend Development", "Geospatial Systems",
+        ],
+        hasOccupation: {
+          "@type": "Occupation",
+          name: locale === 'fr' ? "Ingénieur Logiciel Senior" : "Senior Software Engineer",
+          skills:
+            "PHP, Laravel, Symfony, React.js, PostgreSQL, PostGIS, PgRouting, Redis, Firebase Cloud Messaging, ELK Stack, Typesense",
+          occupationLocation: {
+            "@type": "Country",
+            name: locale === 'fr' ? "Maroc" : "Morocco",
+          },
         },
-      ],
-      knowsAbout: [
-        "PHP", "Laravel", "Symfony", "JavaScript", "React.js", "PostgreSQL",
-        "PostGIS", "PgRouting", "Redis", "MySQL", "Firebase Cloud Messaging",
-        "ELK Stack", "Typesense", "REST APIs", "Web Development",
-        "Backend Development", "Geospatial Systems",
-      ],
-      hasOccupation: {
-        "@type": "Occupation",
-        name: locale === 'fr' ? "Ingénieur Logiciel Senior" : "Senior Software Engineer",
-        skills:
-          "PHP, Laravel, Symfony, React.js, PostgreSQL, PostGIS, PgRouting, Redis, Firebase Cloud Messaging, ELK Stack, Typesense",
-        occupationLocation: {
-          "@type": "Country",
-          name: locale === 'fr' ? "Maroc" : "Morocco",
-        },
-      },
+      }
     },
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
       name: "Ayoub Sabi",
-      url: "https://ayoubsabi.com",
+      url: baseUrl,
       description: locale === 'fr' ? "Portfolio d'Ayoub Sabi" : "Portfolio of Ayoub Sabi",
       author: {
         "@type": "Person",
