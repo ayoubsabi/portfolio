@@ -53,7 +53,7 @@ export default function Education() {
   const educationArray = data.raw("education") as EducationType[];
 
   return (
-    <section id="education" className="py-24 px-6 bg-bg-alt/50">
+    <section id="education" className="py-24 px-6">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
